@@ -1,10 +1,12 @@
+require('should')
+
 describe('prime function speed', () => {
 
   const lib = require('../../index')
 
-  it('returns first 1000000 prime numbers in less 2 seconds', () => {
-    const primes = lib.primesTo(15200000)
-    // console.log(primes.length)
+  it('returns more than 1000000 prime numbers in less than 2 seconds', () => {
+    const primes = lib.primesTo(16000000)
+    primes.length.should.be.above(1000000)
   })
 
 })

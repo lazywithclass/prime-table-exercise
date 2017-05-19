@@ -20,7 +20,7 @@ const primesTo = (limit) => {
     return base
   }
 
-  let base = 2, pruned = [2]
+  let base = 2
   while (base < primes.length) {
     primes = nullifyMultiples(primes, base)
     base = next(base + 1)
