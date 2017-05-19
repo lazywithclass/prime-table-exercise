@@ -24,10 +24,6 @@ const primesTo = (limit) => {
 
   let base = 2, pruned = [2]
   while (base < primes.length) {
-    if (pruned.indexOf(base) > -1) {
-      base = next(base + 1)
-      continue
-    }
     primes = nullifyMultiples(primes, base)
     base = next(base + 1)
   }
