@@ -9,8 +9,8 @@
   "scripts": {
     "test": "npm run coverage",
     "performance": "./node_modules/.bin/mocha test/performance",
-    "dev": "./node_modules/.bin/mocha test/unit --watch --require should",
-    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/unit --require should",
+    "dev": "./node_modules/.bin/mocha test/unit --watch",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test/unit",
     "start": "node cli.js"
   },
   "repository": {

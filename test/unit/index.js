@@ -1,4 +1,5 @@
 const sinon = require('sinon')
+require('should')
 
 describe('testing environment', () => {
   it('works', () => {
