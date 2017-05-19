@@ -2,6 +2,34 @@
 
 Write an application that takes numeric input (N) from a user and outputs a multiplication table of (N) prime numbers. 
 
+### Configuration
+
+
+```bash
+# get the code
+$ git clone git@github.com:lazywithclass/prime-table-exercise.git
+
+# get the dependencies
+$ npm i
+```
+
+### Use it
+
+```bash
+$ npm start $integer
+```
+
+Where `$integer` is an integer of your choice, 16'000'000 as input takes less
+than 2 seconds to produce more than 1'000'000 prime numbers. 
+
+### Test it
+
+```bash
+$ npm test
+```
+
+runs both unit tests with coverage info and the performance test. 
+
 ### The requirements
 
  * do not use a brute force / trial division algorithm
