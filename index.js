@@ -1,8 +1,6 @@
-const divisibleBy = (n, m) => n % m === 0
-
 const nullifyMultiples = (array, base) => {
   for (let i = base + base; i < array.length; i += base) {
-    if (divisibleBy(i, base)) array[i] = null
+    array[i] = null
   }
 
   return array
