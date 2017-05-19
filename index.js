@@ -35,7 +35,28 @@ const primesTo = (limit) => {
   return primes.filter((n) => n !== null)
 }
 
+const createMultiplicationTable = (numbers) =>
+  numbers.map(n => {
+    let row = numbers.map(m => n * m)
+    return row
+  })
+
+const showMultiplicationTable = (numbers, table, showFunx) => {
+  function show(n) { showFunx(n.toString()) }
+
+  // draw the top
+  showFunx(' ')
+  numbers.forEach(show)
+
+  numbers.forEach((n, i) => {
+    show(n)
+    table[i].forEach(show)
+  })
+}
+
 module.exports = {
   primesTo: primesTo,
-  nullifyMultiples: nullifyMultiples
+  nullifyMultiples: nullifyMultiples,
+  createMultiplicationTable: createMultiplicationTable,
+  showMultiplicationTable: showMultiplicationTable
 }
