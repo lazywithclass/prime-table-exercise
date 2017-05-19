@@ -57,10 +57,12 @@ describe('prime table exercise', () => {
 
   describe('showMultiplicationTable', () => {
 
-    let showFunx = sinon.stub()
+    let showFunx = sinon.stub(),
+        newLineFunx = sinon.stub()
 
     beforeEach(() => {
       showFunx = sinon.stub()
+      newLineFunx = sinon.stub()
     })
 
     it('shows the multiplication table', () => {
@@ -70,7 +72,7 @@ describe('prime table exercise', () => {
         [ 10, 15, 25 ],
       ]
       const numbers = [ 2, 3, 5 ]
-      lib.showMultiplicationTable(numbers, table, showFunx)
+      lib.showMultiplicationTable(numbers, table, showFunx, newLineFunx)
 
       // assert on the borders of the table shown to the user
       // top row
@@ -94,6 +96,8 @@ describe('prime table exercise', () => {
       showFunx.args[13][0].should.equal('10')
       showFunx.args[14][0].should.equal('15')
       showFunx.args[15][0].should.equal('25')
+
+      newLineFunx.callCount.should.equal(4)
     });
 
   })

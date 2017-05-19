@@ -41,16 +41,18 @@ const createMultiplicationTable = (numbers) =>
     return row
   })
 
-const showMultiplicationTable = (numbers, table, showFunx) => {
+const showMultiplicationTable = (numbers, table, showFunx, newLineFunx) => {
   function show(n) { showFunx(n.toString()) }
 
   // draw the top
   showFunx(' ')
   numbers.forEach(show)
+  newLineFunx()
 
   numbers.forEach((n, i) => {
     show(n)
     table[i].forEach(show)
+    newLineFunx()
   })
 }
 
