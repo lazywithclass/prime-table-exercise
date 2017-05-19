@@ -1,4 +1,4 @@
-const nullifyMultiples = (array, base) => {
+const crossOut = (array, base) => {
   for (let i = base + base; i < array.length; i += base) {
     array[i] = null
   }
@@ -22,7 +22,7 @@ const primesTo = (limit) => {
 
   let base = 2
   while (base < primes.length) {
-    primes = nullifyMultiples(primes, base)
+    primes = crossOut(primes, base)
     base = next(base + 1)
   }
 
@@ -56,7 +56,7 @@ const showMultiplicationTable = (numbers, table, showFunx, newLineFunx) => {
 
 module.exports = {
   primesTo: primesTo,
-  nullifyMultiples: nullifyMultiples,
+  crossOut: crossOut,
   createMultiplicationTable: createMultiplicationTable,
   showMultiplicationTable: showMultiplicationTable
 }

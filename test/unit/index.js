@@ -11,10 +11,10 @@ describe('prime table exercise', () => {
 
   const lib = require('../../index')
 
-  describe('nullifyMultiples', () => {
+  describe('crossOut', () => {
 
     it('sets to null multiples of the argument', () => {
-      const result = lib.nullifyMultiples([0, 1, 2, 3, 4, 5, 6, 7, 8], 2)
+      const result = lib.crossOut([0, 1, 2, 3, 4, 5, 6, 7, 8], 2)
       result.should.eql([0, 1, 2, 3, null, 5, null, 7, null])
     })
 
