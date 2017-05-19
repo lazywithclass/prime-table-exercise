@@ -16,17 +16,21 @@ const primesTo = (limit) => {
   }
 
   function next(base) {
-    return primes[base] === null ? next(base + 1) : base
+    while (primes[base] === null) {
+      base++
+    }
+    return base
   }
 
-  function recurNullify(base) {
-    base = next(base)
-    if (base > primes.length) return
+  let base = 2, pruned = [2]
+  while (base < primes.length) {
+    if (pruned.indexOf(base) > -1) {
+      base = next(base + 1)
+      continue
+    }
     primes = nullifyMultiples(primes, base)
-    recurNullify(base + 1)
+    base = next(base + 1)
   }
-
-  recurNullify(2)
 
   // removing 0 and 1
   primes.shift()

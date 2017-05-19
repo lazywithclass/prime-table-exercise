@@ -8,7 +8,7 @@ describe('testing environment', () => {
 
 describe('prime table exercise', () => {
 
-  const lib = require('../index')
+  const lib = require('../../index')
 
   describe('nullifyMultiples', () => {
 
